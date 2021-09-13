@@ -14,21 +14,22 @@ Create a component that displays list of people persisted in redux store. `Peopl
 <div class='App-box'>James Bond</div>
 <!-- and so on... -->
 ```
-Collection of divs should be returned from a method (not `render`).
+Collection of divs should be returned from a callback (not directly in `return`).
 
 ### Second step
-In `Filter.jsx` create an input, which modifies `filterQuery` property in redux store. This should be done by `onChange` callback. Don't use `refs` or `jquery`. Also, no need to use any `debounce` or `throttle`.
+In `Filter.jsx` create an input, which modifies `people.query` property in redux store. This should be done by `onChange` callback. Don't use `refs` or `jquery`. Also, no need to use any `debounce` or `throttle`.
 
 ### Third step
 In `People.jsx` in a method that renders people list, create a method that will filter people collection by query from our input. This filter should be **case insensitive**.
 
 Files that should be edited:
-- src/people/People.jsx
-- src/people/Filter.jsx
-- src/reducers/people.js
-- src/reducers/index.js
-- src/actions/people.js
-- src/types/people.js
+- src/components/People.jsx
+- src/components/Filter.jsx
+- src/redux/*
+  - types.js
+  - reducer.js
+  - actions.js
+  - selectors.js
 
 Do not edit any other files.
 
@@ -37,4 +38,3 @@ Here's how this application should work: https://gfycat.com/SimilarDefensiveCatb
 
 ## Note
 Take commented ellipsises (...) as hints where to put lines of code. **Don't forget to remove unnecessary chunks of code such as unused methods and variables!**.
-Feel free to use `lodash` in your components!
