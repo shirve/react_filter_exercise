@@ -1,6 +1,7 @@
-// this is an example selector
-const getNothing = (state) => {
-  return null;
-};
+export const getList = (state) => {
+  return state.people.list
+}
 
-// ...
+export const getQuery = (state) => {
+  return state.people.query
+}

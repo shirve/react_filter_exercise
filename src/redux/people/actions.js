@@ -1,9 +1,6 @@
-import * as types from '../people/types';
+import * as types from '../people/types'
 
-// this is an example action
-export const doNothing = (payload) => ({
-  type: types.DO_NOTHING,
+export const setQueryValue = (payload) => ({
+  type: types.SET_QUERY_VALUE,
   payload: payload,
-});
-
-// ...
+})

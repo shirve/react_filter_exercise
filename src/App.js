@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import { Provider } from 'react-redux';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import { Provider } from 'react-redux'
 
-import Filter from './people/Filter';
-import People from './people/People';
+import Filter from './components/Filter'
+import People from './components/People'
 import store from './store'
 
 function App() {
@@ -14,7 +14,9 @@ function App() {
         <h2>React Exercise - Filter</h2>
         <p className='App-header__intro'>
           Visit&nbsp;
-          <a href='https://github.com/blisher/react_filter_exercise'>this repository</a>
+          <a href='https://github.com/blisher/react_filter_exercise'>
+            this repository
+          </a>
           &nbsp;for instructions.
         </p>
       </div>
@@ -25,7 +27,7 @@ function App() {
         </div>
       </Provider>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

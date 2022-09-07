@@ -1,4 +1,4 @@
-import * as types from '../people/types';
+import * as types from '../people/types'
 
 const PEOPLE = [
   { id: 1, name: 'Jeffrey Perkins' },
@@ -18,22 +18,22 @@ const PEOPLE = [
   { id: 15, name: 'Tanisha Norman' },
   { id: 16, name: 'Cynthia Sapp' },
   { id: 17, name: 'Penny Laurent' },
-];
+]
 
 const initialState = {
   list: PEOPLE,
   query: '',
-};
+}
 
 export default function people(state = initialState, action) {
   switch (action.type) {
-
-    // this is an example
-    case types.DO_NOTHING: {
-      return state;
-    }
+    case types.SET_QUERY_VALUE:
+      return {
+        ...state,
+        query: action.payload,
+      }
 
     default:
-      return state;
+      return state
   }
 }
